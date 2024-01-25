@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Appointmente</title>
+</head>
+    <body>
+        <p>My Upcoming Appointments</p>
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Booking Title</th>
+                <th>Booking Type</th>
+                <th>Location</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Notes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="appointment: ${appointments}">
+                <td th:text="${appointment.title}" />
+                <td th:text="${appointment.type}" />
+                <td th:text="${appointment.location}" />
+                <td th:text="${appointment.startDate}" />
+                <td th:text="${appointment.endDate}" />
+                <td th:text="${appointment.notes}" />
+            </tr>
+            </tbody>
+        </table>
+
+        <p><a href="/index">New Appointment</a></p>
+        <p><a href="/myappointments">My Appointments</a></p>
+        <p><a href="/logout">Logout</a></p>
+    </body>
+</html>
