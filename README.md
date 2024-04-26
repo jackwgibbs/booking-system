@@ -1,4 +1,4 @@
-# planner
+# booking-system
 
 A project to implement a booking system using Spring.
 
